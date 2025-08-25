@@ -112,6 +112,48 @@
                             }
                         ]
                     ]
+                },
+                {
+                    "atomType": "Gcode",
+                    "name": "Gcode",
+                    "x": 0.1189516129032258,
+                    "y": 0.45609065155807366,
+                    "uniqueID": "60f8ab5d-3243-4934-bdcb-c505dab18840",
+                    "ioValues": [
+                        {
+                            "name": "Geometry",
+                            "ioValue": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "Tool Size",
+                            "ioValue": 6.35,
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "Passes",
+                            "ioValue": 3,
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "Speed",
+                            "ioValue": 1500,
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "Cut Through",
+                            "ioValue": 1.35,
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "Part Name",
+                            "ioValue": "Molecule",
+                            "currentEquation": null
+                        }
+                    ],
+                    "description": "Generates Maslow gcode from the input geometry. For single parts, generates one gcode file. For assemblies, extracts individual parts, sorts them based on the selected direction (Left, Right, Top, or Bottom) using bounding boxes, generates gcode for each part sequentially, and concatenates the results into one file.",
+                    "partName": "Molecule",
+                    "sortDirection": "Left"
                 }
             ],
             "allConnectors": [
@@ -128,6 +170,13 @@
                     "ap2Primary": false,
                     "ap1ID": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
                     "ap2ID": "8ab03ab0-c14f-43a3-adc1-bbd1cfa72282"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
+                    "ap2ID": "60f8ab5d-3243-4934-bdcb-c505dab18840"
                 }
             ],
             "fileTypeVersion": 1,
