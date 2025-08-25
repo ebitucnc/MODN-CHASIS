@@ -54,8 +54,8 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.3709677419354839,
-                    "y": 0.5750708215297451,
+                    "x": 0.3844086021505377,
+                    "y": 0.7762039660056658,
                     "uniqueID": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
                     "ioValues": [
                         {
@@ -72,88 +72,44 @@
                     "description": "Extrudes a 2D shape. Input can be negitive. "
                 },
                 {
-                    "atomType": "CutLayout",
-                    "name": "Cut Layout",
-                    "x": 0.20631720430107525,
-                    "y": 0.3002832861189802,
-                    "uniqueID": "8ab03ab0-c14f-43a3-adc1-bbd1cfa72282",
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.15053763440860216,
+                    "y": 0.7535410764872521,
+                    "uniqueID": "2b58d860-bf81-424c-92fd-fce6cb452ae6",
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 100,
+                            "currentEquation": "100"
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 800,
+                            "currentEquation": "800"
+                        }
+                    ],
+                    "description": "Creates a new rectangle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.3521505376344086,
+                    "y": 0.5495750708215298,
+                    "uniqueID": "be1fc63a-33d8-43b2-8165-143086267746",
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
+                            "ioValue": "2b58d860-bf81-424c-92fd-fce6cb452ae6",
                             "currentEquation": null
                         },
                         {
-                            "name": "Sheet Width",
-                            "ioValue": 2438,
-                            "currentEquation": "2438"
-                        },
-                        {
-                            "name": "Sheet Height",
-                            "ioValue": 1219,
-                            "currentEquation": "1219"
-                        },
-                        {
-                            "name": "Part Padding",
-                            "ioValue": 10,
-                            "currentEquation": "10"
+                            "name": "height",
+                            "ioValue": 1000,
+                            "currentEquation": "1000"
                         }
                     ],
-                    "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
-                    "placements": [
-                        [
-                            {
-                                "id": 0,
-                                "rotate": 210,
-                                "translate": {
-                                    "x": 55.106918579730866,
-                                    "y": 55.106918579730866
-                                }
-                            }
-                        ]
-                    ]
-                },
-                {
-                    "atomType": "Gcode",
-                    "name": "Gcode",
-                    "x": 0.1189516129032258,
-                    "y": 0.45609065155807366,
-                    "uniqueID": "60f8ab5d-3243-4934-bdcb-c505dab18840",
-                    "ioValues": [
-                        {
-                            "name": "Geometry",
-                            "ioValue": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
-                            "currentEquation": null
-                        },
-                        {
-                            "name": "Tool Size",
-                            "ioValue": 6.35,
-                            "currentEquation": null
-                        },
-                        {
-                            "name": "Passes",
-                            "ioValue": 3,
-                            "currentEquation": null
-                        },
-                        {
-                            "name": "Speed",
-                            "ioValue": 1500,
-                            "currentEquation": null
-                        },
-                        {
-                            "name": "Cut Through",
-                            "ioValue": 1.35,
-                            "currentEquation": null
-                        },
-                        {
-                            "name": "Part Name",
-                            "ioValue": "Molecule",
-                            "currentEquation": null
-                        }
-                    ],
-                    "description": "Generates Maslow gcode from the input geometry. For single parts, generates one gcode file. For assemblies, extracts individual parts, sorts them based on the selected direction (Left, Right, Top, or Bottom) using bounding boxes, generates gcode for each part sequentially, and concatenates the results into one file.",
-                    "partName": "Molecule",
-                    "sortDirection": "Left"
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
                 }
             ],
             "allConnectors": [
@@ -167,17 +123,11 @@
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
-                    "ap2Primary": false,
-                    "ap1ID": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
-                    "ap2ID": "8ab03ab0-c14f-43a3-adc1-bbd1cfa72282"
+                    "ap2Primary": true,
+                    "ap1ID": "2b58d860-bf81-424c-92fd-fce6cb452ae6",
+                    "ap2ID": "be1fc63a-33d8-43b2-8165-143086267746"
                 },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "Geometry",
-                    "ap2Primary": false,
-                    "ap1ID": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
-                    "ap2ID": "60f8ab5d-3243-4934-bdcb-c505dab18840"
-                }
+                null
             ],
             "fileTypeVersion": 1,
             "compiledBom": {}
