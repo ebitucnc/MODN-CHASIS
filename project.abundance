@@ -30,8 +30,8 @@
                 {
                     "atomType": "Output",
                     "name": "Output",
-                    "x": 0.9737903225806451,
-                    "y": 0.48725212464589235,
+                    "x": 0.965725806451613,
+                    "y": 0.4815864022662889,
                     "uniqueID": "c123fa8b-3903-4f7e-a34e-34850bdb60be",
                     "ioValues": [],
                     "description": "Connect geometry here to make it available in the next level up. "
@@ -45,8 +45,8 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 1000,
-                            "currentEquation": "1000"
+                            "ioValue": 100,
+                            "currentEquation": "100"
                         }
                     ],
                     "description": "Creates a new circle."
@@ -70,6 +70,48 @@
                         }
                     ],
                     "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "CutLayout",
+                    "name": "Cut Layout",
+                    "x": 0.20631720430107525,
+                    "y": 0.3002832861189802,
+                    "uniqueID": "8ab03ab0-c14f-43a3-adc1-bbd1cfa72282",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "Sheet Width",
+                            "ioValue": 2438,
+                            "currentEquation": "2438"
+                        },
+                        {
+                            "name": "Sheet Height",
+                            "ioValue": 1219,
+                            "currentEquation": "1219"
+                        },
+                        {
+                            "name": "Part Padding",
+                            "ioValue": 10,
+                            "currentEquation": "10"
+                        }
+                    ],
+                    "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+                    "placements": [
+                        [
+                            {
+                                "id": 0,
+                                "rotate": 210,
+                                "translate": {
+                                    "x": 55.106918579730866,
+                                    "y": 55.106918579730866
+                                }
+                            }
+                        ]
+                    ]
                 }
             ],
             "allConnectors": [
@@ -79,6 +121,13 @@
                     "ap2Primary": true,
                     "ap1ID": "bdd57f6c-ec67-41ed-b5d6-7eb0ec295495",
                     "ap2ID": "ffbae456-78ff-4a05-ae88-acb677aacbb5"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "ffbae456-78ff-4a05-ae88-acb677aacbb5",
+                    "ap2ID": "8ab03ab0-c14f-43a3-adc1-bbd1cfa72282"
                 }
             ],
             "fileTypeVersion": 1,
