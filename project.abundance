@@ -1,13 +1,94 @@
 {
     "atomType": "Molecule",
-    "name": "MODN CHASIS",
+    "name": "MODN-CHASIS",
     "x": 0,
     "y": 0,
     "uniqueID": "dd38ce3f-c3dd-476e-bcde-8940da697918",
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": "de0a0143-c253-459d-ac96-536c27104a0f",
+            "ioValues": [],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Molecule",
+            "x": 0.10954301075268817,
+            "y": 0.4164305949008499,
+            "uniqueID": "826f3b74-7508-484b-9c5f-0e465ea28b35",
+            "ioValues": [],
+            "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.9737903225806451,
+                    "y": 0.48725212464589235,
+                    "uniqueID": "c123fa8b-3903-4f7e-a34e-34850bdb60be",
+                    "ioValues": [],
+                    "description": "Connect geometry here to make it available in the next level up. "
+                },
+                {
+                    "atomType": "Molecule",
+                    "name": "Molecule",
+                    "x": 0.1189516129032258,
+                    "y": 0.4390934844192635,
+                    "uniqueID": "e5a2e2c5-2560-4f73-9530-954b6ad80868",
+                    "ioValues": [],
+                    "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+                    "topLevel": false,
+                    "allAtoms": [
+                        {
+                            "atomType": "Output",
+                            "name": "Output",
+                            "x": 0.98,
+                            "y": 0.5,
+                            "uniqueID": "2ce12dd6-be14-4b4e-95be-24cc6b852b9c",
+                            "ioValues": [],
+                            "description": "Connect geometry here to make it available in the next level up. "
+                        }
+                    ],
+                    "allConnectors": [],
+                    "fileTypeVersion": 1,
+                    "compiledBom": {}
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.24731182795698922,
+                    "y": 0.5864022662889519,
+                    "uniqueID": "2c9ff268-12d7-4761-b5b1-761d31279208",
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 10,
+                            "currentEquation": "10"
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "diameter",
+                    "ap2Primary": false,
+                    "ap1ID": "e5a2e2c5-2560-4f73-9530-954b6ad80868",
+                    "ap2ID": "2c9ff268-12d7-4761-b5b1-761d31279208"
+                }
+            ],
+            "fileTypeVersion": 1,
+            "compiledBom": {}
+        }
+    ],
     "allConnectors": [],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
